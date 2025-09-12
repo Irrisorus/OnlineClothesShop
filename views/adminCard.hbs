@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание товара</title>
+    <link rel="stylesheet" href="/admin/styles/resetCard.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/admin/styles/Card.css">
+    <link rel="stylesheet" href="/admin/styles/header.css">
+    <link rel="stylesheet" href="/admin/styles/footer.css">
+</head>
+<body>
+    {{>adminHeader}}
+ 
+    <main class="container">
+        <form class="product-form">
+            <h1>Создание нового товара</h1>
+            
+            <div class="form-section">
+                <h2>Основная информация</h2>
+                <div class="form-group">
+                    <label for="firstName">Название товара</label>
+                    <textarea  id="firstName" name="firstName" required>{{name}}</textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="article">Артикул</label>
+                        <textarea id="article" name="article" required>{{article}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Бренд</label>
+                        <textarea  id="brand" name="brand" required>{{brand}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Цены</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Цена</label>
+                        <textarea  onkeyup="checkInput(this)" id="price" name="price" min="0" step="0.01"  required>{{price}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="discountPrice">Скидочная цена</label>
+                        <textarea  onkeyup="checkInput(this)" id="discountPrice" name="discountPrice" min="0" step="0.01">{{salePrice}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Размеры и количество</h2>
+                <div id="sizes-container">
+                    {{#each availableAmount}}
+                    <div class="size-row">
+                        <div class="form-group">
+                            <label for="size-1">Размер</label>
+                            <textarea id="size-1" name="sizes[]" class="size" required>{{this.size}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity-1">Количество</label>
+                            <textarea onkeyup="checkInput(this)" id="quantity-1" name="quantities[]" min="0" class="size-amount" required>{{this.amount}}</textarea>
+                        </div>
+                        <button type="button" class="icon-button remove-size" title="Удалить размер">✕</button>
+                    </div>
+                    {{/each}}
+                    {{#if new}}
+                    <div class="size-row">
+                        <div class="form-group">
+                            <label for="size-1">Размер</label>
+                            <textarea id="size-1" name="sizes[]" class="size" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity-1">Количество</label>
+                            <textarea onkeyup="checkInput(this)" id="quantity-1" name="quantities[]" min="0" class="size-amount" required></textarea>
+                        </div>
+                        <button type="button" class="icon-button remove-size" title="Удалить размер">✕</button>
+                    </div>
+                {{/if}}
+                </div>
+                <button type="button" id="add-size" class="secondary-button">Добавить размер</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Дополнительная информация</h2>
+                <div id="img-container">
+                {{#each img}}
+                    <div class="img-row">
+                        <div class="form-group">
+                            <label for="photoUrl">Ссылка на фото</label>
+                            <textarea id="photoUrl" name="photoUrl" required>{{this}}</textarea>
+                        </div>
+                        <button type="button" class="icon-button remove-img" title="Удалить размер">✕</button>
+                    </div>
+                {{/each}}
+                {{#if new}}
+                    <div class="img-row">
+                        <div class="form-group">
+                            <label for="photoUrl">Ссылка на фото</label>
+                            <textarea id="photoUrl" name="photoUrl" required></textarea>
+                        </div>
+                        <button type="button" class="icon-button remove-img" title="Удалить размер">✕</button>
+                    </div>
+                {{/if}}
+                </div>
+            
+                <button type="button" id="add-img" class="secondary-button" style="margin-bottom: 10px;">Добавить фото</button>
+                
+                <div class="form-group">
+                    <label for="type">Тип товара</label>
+                    <select id="type" name="type" required>
+                        {{#if_eq type "jacket" }}
+                        <option value="shoes">Обувь</option>
+                        <option value="jacket" selected>Куртки</option>
+                        <option value="shirt">Футболки</option>
+                        <option value="pants">Штаны</option>
+                        {{/if_eq}}
+                        {{#if_eq type "shoes" }}
+                        <option value="shoes" selected>Обувь</option>
+                        <option value="jacket" >Куртки</option>
+                        <option value="shirt">Футболки</option>
+                        <option value="pants">Штаны</option>
+                        {{/if_eq}}
+                        {{#if_eq type "shirt" }}
+                        <option value="shoes">Обувь</option>
+                        <option value="jacket" >Куртки</option>
+                        <option value="shirt" selected>Футболки</option>
+                        <option value="pants">Штаны</option>
+                        {{/if_eq}}
+                        {{#if_eq type "pants" }}
+                        <option value="shoes">Обувь</option>
+                        <option value="jacket" >Куртки</option>
+                        <option value="shirt">Футболки</option>
+                        <option value="pants" selected>Штаны</option>
+                        {{/if_eq}}
+                        {{#if new}}
+                        <option value="shoes">Обувь</option>
+                        <option value="jacket" >Куртки</option>
+                        <option value="shirt">Футболки</option>
+                        <option value="pants" >Штаны</option>
+                        {{/if}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                   
+                    
+                    
+                         <label>Пол</label>
+                          <select id="sex" name="sex" required>
+                        {{#if_eq sex "male"}}
+                            <option value="male" selected>Мужское</option>
+                            <option value="female" >Женское</option>
+                        {{else}}
+                            <option value="male" >Мужское</option>
+                            <option value="female"selected >Женское</option>
+                        {{/if_eq}}
+                        </select>
+                        
+                        <!-- <label class="radio-label">
+                            <input type="radio" name="gender" value="unisex" required>
+                            Унисекс
+                        </label> -->
+                    
+                </div>
+            </div>
+            {{#if edit}}
+            <div class="form-actions">
+                <button type="button" class="delete-button">Удалить товар</button>
+                <button type="submit" class="edit-button">Редактировать товара</button>
+            </div>
+            {{else}}
+            <div class="form-actions">
+                {{!-- <button type="button" class="secondary-button">Отмена</button> --}}
+                <button type="submit" class="edit-button">Создать Товар</button>
+            </div>
+            {{/if}}
+        </form>
+        <div id="popup" class="popup">
+            <div class="popup-background"></div>
+        <div class="popup-content">
+            <p style="margin-bottom: 10px;">Вы уверены?</p>
+            <button id="cancelButton" class="cancelButton">Отменить</button>
+            <button id="confirmButton" class="confirmButton">Подтвердить</button>
+        </div>
+    </div>
+        <div id="notification">Изменения подтверждены</div>
+    </main>
+ 
+    {{>footer}}
+    <script  src="/admin/scripts/form-validation.js"></script>
+    <script  src="/admin/scripts/size-manager.js"></script>
+    <script src="/admin/scripts/header.js"></script>
+    <script src="/admin/scripts/checkUser.js"></script>
+</body>
+</html>

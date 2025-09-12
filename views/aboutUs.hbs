@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - BrandHouse</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/aboutUs.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+ 
+</head>
+<body>
+  {{>header}}
+
+    <div class="hero">
+        <div class="content">
+            <h1 class="title">О нас - BrandHouse</h1>
+            <p class="subtitle">Ваш надежный партнер в мире моды с 2015 года</p>
+            
+            <p class="text">
+                BrandHouse - это ведущий белорусский интернет-магазин модной одежды, где качество встречается со стилем. 
+                Мы тщательно отбираем каждый бренд и каждую вещь, чтобы предложить вам только лучшее.
+            </p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🛍️</div>
+                    <div class="stat-number">Множество</div>
+                    <div class="stat-label">Брендов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Лет на рынке</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="team">
+        <div class="content">
+            <h2 class="title">Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&h=400" alt="Анна Петрова">
+                    <h3 class="member-name">Анна Петрова</h3>
+                    <p class="member-position">Генеральный директор</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400" alt="Михаил Иванов">
+                    <h3 class="member-name">Михаил Иванов</h3>
+                    <p class="member-position">Руководитель отдела закупок</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=400" alt="Елена Сидорова">
+                    <h3 class="member-name">Елена Сидорова</h3>
+                    <p class="member-position">Главный стилист</p>
+                </div>
+            </div>
+
+            <div class="mission">
+                <h2 class="title">Наша миссия</h2>
+                <p class="text">
+                    Мы стремимся сделать качественную модную одежду доступной для каждого жителя Беларуси. 
+                    Наша цель - помочь вам выразить свою индивидуальность через стиль, предлагая широкий 
+                    выбор одежды от лучших мировых и локальных брендов.
+                </p>
+                <p class="text">
+                    В BrandHouse мы верим, что мода должна быть доступной, качественной и устойчивой. 
+                    Мы постоянно расширяем наш ассортимент, следим за последними трендами и предлагаем 
+                    персонализированный сервис каждому клиенту.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+ {{>footer}}
+    
+</body>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+</html>

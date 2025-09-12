@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    
+    background-color: white ;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'UNCAGE-Regular',Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ----------------------------------------------------hero------------------ */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+.hero h3{
+    margin-top: 30px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* -----------------------------------------------brands------------------ */
+.brands {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.brand-card a{
+    color: #000000;
+}
+
+.brand-card {
+    background-color: white ;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  
+    border-radius: 10px;
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    
+}
+.brand-card h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    
+}
+/* ------------------------------clothes styles */
+.clothes-style{
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.clothes-style h3{
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.brand-card img{
+    padding-bottom: 20px;
+}
+.brand-card:hover {
+    transform: scale(1.05);
+}
+
+.brand-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    /* background-color: #564F6F ; */
+    background-image: url('https://i.pinimg.com/736x/5b/c7/66/5bc766265824ee49f621ab207f2f0d16.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    max-width: 40%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex: 1 1 calc(25% - 20px);
+    transition: transform 0.3s ease;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    font-weight: 500;
+    width: 100%;
+}
+.product-card:nth-child(2){
+    background-image: url('https://static.sneakerjagers.com/news/nl/2023/01/f556229a5f6b02e449a85d1317d2cd6800e62581_B75807_Adidas_Samba_OG_Core_Black_Cloud_White_Gum5_sm_4_768x768_crop_center.jpg');
+}
+.product-card:hover {
+    transform: scale(1.05) ;
+    cursor: pointer;
+}
+/* -------------------------- footer */
+
+.marquee {
+    background-color: #EDB5BF;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    font-weight: bold;
+    color: whitesmoke; /* Цвет текста */
+}
+
+
+
+
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+@media (max-width: 900px){
+    .product-card{
+        text-align: center;
+    }
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .catalog {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brands, .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+    .product-card{
+        max-width: none;
+        flex: none;
+        height: 300px;
+    }
+    .brand-card, .product-card {
+        width: 80%;
+    }
+}
+

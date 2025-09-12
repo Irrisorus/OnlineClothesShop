@@ -1,0 +1,160 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255)  ;
+    color:#D1D7E0;
+    position: relative;
+    box-shadow: 0 2px 4px;
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-family: 'WT Karsa Mono', Arial, Helvetica, sans-serif;
+   color: #3b82f6;
+   cursor: pointer;
+   text-decoration: none;
+}
+.shopping{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+#user{
+    cursor: pointer;
+}
+.sale{
+    color: black ;
+    transition: 0.3s ;
+}
+
+.sale:hover{
+    color: #2b2b2b;
+    
+}
+.catalog a {
+    color: black ;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-family: 'UNCAGE-Medium';
+    letter-spacing: 1.5px;
+}
+
+.catalog a:hover {
+    color: #3b82f6; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    
+    gap: 20px;
+}
+
+.search-container input {
+    padding-left: 5px;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    color: #D1D7E0;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+
+
+
+/* ------------------------burger */
+
+.burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+@media (max-width: 1020px) {
+    .burger-menu {
+        display: block;
+    }
+    /* header{
+        border-bottom: 1px solid black;
+    } */
+    .catalog {
+        display: none;
+        position: absolute;
+        top: 170%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px  rgba(0,0,0,0.1);
+    }
+
+    .search-container{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        
+        padding: 1rem;
+        
+    }
+
+    .catalog.active{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 10;
+        
+    }   
+    
+    .search-container.active{
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+        border-top: 1px solid black;
+    }
+    
+    .catalog a{
+        margin: 0px;
+    } 
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+<body>
+    {{>header}}
+    <main class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h1>Личный профиль</h1>
+            </div>
+
+            <div class="profile-info">
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <label>Имя</label>
+                        <p>{{name}}</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <label>Email</label>
+                        <p>{{email}}</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <label>Пароль</label>
+                        <p>{{replaceWithAsterisks password}}</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <label>Адрес</label>
+                        <p>{{adress}}</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <div class="info-content">
+                        <label>Телефон</label>
+                        <p>{{phoneNumber}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="edit-button">Редактировать профиль</button>
+            <button class="logOut-button" id="logOut">Выйти из профиля</button>
+        </div>
+
+    </main>
+    <div class="popUp-wrapper_hidden popUp-wrapper ">
+        <div class="popUp-window">
+            <form >
+                <h2>Редактирование</h2>
+                <label>Имя</label>
+                <input type="text" id="username" >
+                
+                <label>Адрес</label>
+                <input type="text" id="adress" >
+                <label>Номер</label>
+                <input type="text" id="phoneNumber"  >
+                <label>Подтверждение пароля</label>
+                <input type="password" id="confirmPassword" >
+                <div class="button-cont">
+                    <div class="submit-change">Подтвердить</div>
+                    <div class="cancel-change">Отмена</div>
+                </div>
+                <div class="error-message " id="error"  style="color: red; "></div>
+            </form>
+        </div>
+    </div>
+    {{>footer}}
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+<script src="/scripts/personalAccount.js"></script>
+</body>
+</html>

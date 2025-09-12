@@ -1,0 +1,19 @@
+footer {
+    font-family: 'UNCAGE-Regular',Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: black ;
+    margin-top: auto; /* Этот стиль заставляет футер прижиматься к низу */
+    
+}
+
+.contact-info a {
+    color: rgb(255, 255, 255);
+    margin: 0 15px;
+    transition: 0.3s ;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+.contact-info a:hover{
+        color: #3b82f6;
+}

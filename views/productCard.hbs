@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/card.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+   {{>header}}
+        
+    </header>
+    <main>
+        <div class="product-card">
+            {{!-- <div class="img-box">
+                <img src="https://via.placeholder.com/300" alt="Название товара">
+            </div> --}}
+                <div class="swiper">
+   
+                    <div class="swiper-wrapper">
+                      
+                        {{#each img}}
+                        <div class="swiper-slide">
+                            <div class="swiper__img-box">
+                                <img src="{{this}}" alt="" style="width: 100%;">
+                            </div>
+                        </div>
+                        {{/each }}
+                      
+                    </div>
+                    
+                   
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    
+                 </div>
+            
+            <div class="product-info">
+                <h2 class="prod-name">{{name}}</h2>
+                <p class="prod-article" >Артикул: <span id="article">{{article}}</span></p>
+               {{#if_eq salePrice ""}}
+                        <div class="product-price" style="text-decoration: none;">{{price}} BYN</div>
+                        {{else}}
+                        <div class="sale-price">{{salePrice}} BYN</div>
+                        <div class="old-price">{{price}} BYN</div>
+                        
+                        {{/if_eq}}
+                <div class="size-selection">
+                    {{#if_eq outOfstock true}}
+                    <div class="product-price">НЕТ В НАЛИЧИИ</div>
+                    {{else}}
+                        {{#each availableAmount}}
+                        {{#if_notEq this.amount 0}}
+                            <div class="size-box">{{this.size}}</div>
+                        {{/if_notEq}}
+                        {{!-- <div class="size-box size-box_active">S</div>
+                    
+                        <div class="size-box">L</div>
+                        <div class="size-box">XL</div> --}}
+                        {{/each}}
+                    {{/if_eq}}
+                </div>
+        
+                <div class="quantity-selection">
+
+                    <div class="quantity-elem quantity-minus-btn">-</div>
+                    <div class="quantity-elem product-quantity">1</div>
+                    <div class="quantity-elem quantity-plus-btn">+</div>
+
+                    <!-- <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1"> -->
+                </div>
+                {{#if_eq outOfstock true}}
+                    <button class="btn" style="cursor: not-allowed;">В корзину</button>
+                {{else}}
+                    <button class="btn" >В корзину</button>
+                {{/if_eq}}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="reviews-section">
+            <h2>ОТЗЫВЫ</h2>
+            
+            <div class="swiper-review-slider">
+                {{#if reviews}}
+                <div class="swiper-wrapper review-slider-wrapper">
+                    
+                    {{#each reviews}}
+                    <div class="swiper-slide swiper-review-slide">
+                        <div class="review-card">
+                            <h3>{{userName}}</h3>
+                            <div class="stars">{{review}}★</div>
+                            <p class="review-text">{{reviewText}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                    </div>
+                    {{else}}
+                    <div class="swiper-wrapper review-slider-wrapper" style="justify-content: center;">
+                        <h2 class="no-reviews-h2" style="font-size:24px; font-weight:700">НЕТ ОТЗЫВОВ</h2>
+                   </div>
+                    
+                  
+                    
+                
+                  {{/if}}
+            <div class="swiper-pagination"></div>
+            <div class="review-slider-button-next"></div>
+            <div class="review-slider-button-prev"></div>
+            </div>
+
+            <div class="review-form">
+            <h3>Добавьте свой отзыв</h3>
+            <form id="addReviewForm">
+                <div class="form-group">
+                <input type="text" id="userName" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                <select id="rating" required>
+                    
+                    <option  value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
+                </select>
+                </div>
+                <div class="form-group">
+                <textarea id="review" placeholder="Ваш отзыв(маскимум 300 символов)" maxlength="300"required></textarea>
+                </div>
+                <button id="reviewBtn" type="submit">Отправить отзыв</button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+{{>footer}}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/scripts/script.js"></script>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+
+</body>
+</html>

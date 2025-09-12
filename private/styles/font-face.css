@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Null-Normal";
+  font-style: normal;
+  font-weight: 400;
+  src:url("/fonts/Null-Normal.woff2") format("woff2"),
+      
+       
+}
+
+
+@font-face {
+  font-family: "Expine-Normal";
+  font-style: normal;
+  font-weight: 400;
+  src:url("/fonts/Expine-Normal.woff2") format("woff2"),
+      
+       
+}
+
+@font-face {
+  font-family:"WT Karsa Mono";
+  font-style: normal;
+  font-weight: 400;
+  src:url("/fonts/WT Karsa Mono.woff2") format("woff2"),
+      
+       
+}
+@font-face {
+  font-family:"UNCAGE-Medium";
+  font-style: normal;
+  font-weight: 400;
+  src:url("/fonts/UNCAGE-Medium.woff2") format("woff2"),
+      
+       
+}
+
+
+@font-face {
+  font-family:"UNCAGE-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src:url("/fonts/UNCAGE-Regular.woff2") format("woff2"),
+      
+       
+}

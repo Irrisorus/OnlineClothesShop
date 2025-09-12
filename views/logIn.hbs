@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/logReg.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    
+    <title>Авторизация</title>
+
+       
+</head>
+<body>
+
+        <div class="background"></div>
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Авторизация</h2>
+                <form id="authForm" action="/" method="POST">
+                    <input type="email" id="userEmail" placeholder="Почта" required />
+                    <input type="password" id="password" placeholder="Пароль" required />
+                    <div class="button-block">
+                        <button type="button" onclick="sendData()">Sign Up</button>
+                        <a href="/brandhouse/register">Register</a>
+                    </div>
+                    <div class="error" id="error-message"></div>
+                </form>
+            </div>
+        </div>
+
+</body>
+<script>
+     const error=document.getElementById("error-message")
+     
+     async function sendData(){
+
+            
+            const userEmail=document.getElementById('userEmail').value;
+            const password = document.getElementById('password').value;
+           
+            const response = await fetch("/brandhouse/authorisation", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                 },
+                body: JSON.stringify({ userEmail:userEmail, password:password}), 
+                })
+
+                const data = await response.json();
+                 if (!response.ok) {
+                    error.textContent = data.message;
+                    error.classList.add("error_none")
+                    return;
+                }
+                if(data.redir){
+                    document.location.pathname = data.path;
+                    return
+                }
+                document.location= data.path;
+
+        }
+</script>`
+<script src="/scripts/header.js"></script>
+</html>

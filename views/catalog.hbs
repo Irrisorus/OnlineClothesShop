@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/catalog.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    
+    
+</head>
+<body>
+   {{>header}}
+
+    <div class="wrapper">
+        <section class="filter">
+            <form class="filter-form">
+                <div class="param_box brand">
+                    <span class="box_filter_modef"></span>
+                    <div class="filter-item">
+                        <div class="filter-title">Бренд</div>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li class="elem-li elem-li__productBrand" id="productBrand">
+                                    
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="Nike" href="/r">Nike</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li elem-li__productBrand" id="productBrand">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="Adidas" href="/r">Adidas</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li elem-li__productBrand" id="productBrand">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="Puma" href="/r">Puma</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="param_box sex">
+                    <span class="box_filter_modef"></span>
+                    <div class="filter-item">
+                        <div class="filter-title">Пол</div>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li class="elem-li" id="productSex">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="Male" href="/r">Мужское</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li" id="productSex">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link"  data-name="female" href="/r">Женское</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="param_box brand">
+                    <span class="box_filter_modef"></span>
+                    <div class="filter-item">
+                        <div class="filter-title">Тип</div>
+                        <div class="filter-content">
+                            <ul class="filter-list">
+                                <li class="elem-li" id="productType">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="shirt" href="/r">Футболки</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li" id="productType">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="shoes" href="/r">Обувь</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li" id="productType">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="pants" href="/r">Штаны</div>
+                                    </label>
+                                </li>
+                                <li class="elem-li" id="productType">
+                                    <label >
+                                        <span class="inp"></span>
+                                        <div class="item-link" data-name="jacket" href="/r">Куртки</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+
+        <main>
+            {{!-- if
+            <div class="search-str">""</div> --}}
+            <div class="card-container">
+
+                {{#each products}}
+                <div class="card">
+                    {{!-- <a href="#" style="cursor: pointer;"> --}}
+                    <div class="img-box" onclick=redirectToCard("{{article}}")>
+                        <img src="{{img.[0]}}" alt="">
+                    </div>
+                    {{!-- </a> --}}
+                    <a href="#" class="card__name-link">{{name}}</a>
+                    <div class="card__article">{{article}}</div>
+                    <div class="card__price-block">
+                        {{#if_eq salePrice ""}}
+                        <div class="original-price" style="text-decoration: none; color:black">{{price}} BYN</div>
+                        {{else}}
+                        {{#if_eq outOfstock true}}
+                        <div class="original-price" style="text-decoration: none;">НЕТ В НАЛИЧИИ</div>
+                        {{else}}
+                        <div class="original-price">{{price}} BYN</div>
+                        <div class="sale-price">{{salePrice}} BYN</div>
+                        {{/if_eq}}
+                        {{/if_eq}}
+                        
+                    </div>
+                    {{!-- <a href="#" class="add-to-cart">В корзину</a> --}}
+                </div>
+                {{/each }}
+
+              
+            </div>
+        </main>
+    </div>
+   
+</main>
+{{>footer}}
+<script src="/scripts/catalog.js"></script>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+</body>
+</html>

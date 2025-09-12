@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/shopping-cart.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+<body>
+   {{>header}}
+    {{#if message}}
+ <main>
+    <section>
+
+    
+         <div class="shopping-cart__container">
+            <div class="shopping-cart__items">
+                <table class="shopping-cart_table">
+                   <tbody class="table">
+                    <tr class="th">
+                        <td class="td" id="col_NAME">Товар</td>
+                        <td class="td" id="col_PRICE">Цена</td>
+                        <td class="td" id="col_AMOUNT">Количество</td>
+                        <td class="td" id="col_SUM">Сумма</td>
+                        <td class="td"></td>
+                    </tr>
+                   {{#each cartProduct}}
+
+                    <tr class="tr">
+                        <td class="td">
+                            <div class="td-cont">
+                                <div class="cart-img">
+                                    <a href="/brandhouse/catalog/product?article={{article}}" class="img-link">
+                                        <img src="{{img}}" alt="" style="width: 91px;">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="/brandhouse/catalog/product?article={{article}}" class="Product-name">{{name}}</a>
+                                    <div class="prod-article">Артикул:<span class="prod-article_value">{{article}}</span></div>
+                                    <div class="prod-size">Размер:<span class="prod-article_size">{{size}}</span></div>
+                                </div>
+                            </div>
+                            
+                        </td>
+                        <td class="td">
+                            <div class="prod-price">{{price}}</div>
+                        </td>
+                        <td class="td">
+                            <div class="prod-amount" >{{amount}}</div>
+                        </td>
+                        <td class="td">
+                            <div class="prod-sum">{{multiplication price amount}}</div>
+                        </td>
+                        <td class="td">
+                            <button class="delete-product" onclick="deleteFromCart(this)">УДАЛИТЬ</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                   </tbody>
+                  </table>
+            </div>
+
+
+       
+            {{#with localUser}}
+            <div class="contact-form">
+                <h2>Контактные данные</h2>
+                <div class="form-group">
+                    <label for="firstName">Имя:</label>
+                    <textarea  id="firstName" name="firstName" required>{{name}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="adress">Адрес Доставки</label>
+                    <textarea  id="adress" name="adress" required>{{adress}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронная почта:</label>
+                    <textarea  id="email" name="email" required>{{email}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <textarea  id="phone" name="phone" required>{{phoneNumber}}</textarea>
+                </div>
+                <button class="btn" type="submit" onclick="confirmedOrder()">Заказать</button>
+                </div> 
+            </div>
+            {{/with}}
+       
+        
+    </section>
+ </main>     
+
+        
+
+            {{else}}
+            <main style="display: flex; justify-content:center; align-items:center; height:800px">
+
+           
+            <div class="empty-cart-cont" >
+            <h2>Ваша корзина пуста</h2>  
+            <a href="/brandhouse/catalog" >Каталог</a>
+            </div>
+              </main>
+        {{/if}}
+
+
+       
+{{>footer}}
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+<script src="/scripts/shoppingCart.js"></script>
+</body>
+</html>

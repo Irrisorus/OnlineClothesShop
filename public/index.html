@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandhaus</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/font-face.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    </head>
+<body>
+    <div class="wrapper">
+        
+    
+    <header>
+        <a class="logo" href="index.html" >BRANDHOUSE</a>
+        <!-- <div class="burger-cont"> -->
+            <nav class="catalog" id="catalog">
+                <a href="/brandhouse/catalog?sex=Male&type=&brand=&title=">МУЖЧИНАМ</a>
+                <a href="/brandhouse/catalog?sex=female&type=&brand=&title=">ЖЕНЩИНАМ</a>
+                <a href="/brandhouse/catalog?sex=&type=shoes&brand=&title=">ОБУВЬ</a>
+                
+            </nav>
+            <div class="search-container" id="searchCont">
+             
+                <a href="/brandhouse/shopping-cart"><img src="img/shopping-icon.png" alt="" class="shopping" href=""></a>
+                <div href="" id="user"><img src="img/user-img.png" class="user-img" ></div>
+                <input type="text" placeholder="Поиск..." class="searchInput">
+                
+            </div>
+            <button class="burger-menu" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        <!-- </div> -->
+       
+    </header>
+    
+    <main>
+        <!-- <div class="marquee">
+            <div class="marquee-content">SALE ДО 50% SALE ДО 50% SALE ДО 50% SALE ДО 50% SALE ДО 50% SALE ДО 50% SALE ДО 50% SALE ДО 50%</div>
+        </div> -->
+        <section class="hero">
+            
+
+            
+            <h3>ИНТЕРНЕТ-МАГАЗИН БРЕНДОВОЙ СПОРТИВНОЙ ОДЕЖДЫ И ОБУВИ BRANDHOUSE</h3>
+            <!-- <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image1.jpg" alt="Слайд 1"></div>
+                    <div class="swiper-slide"><img src="image2.jpg" alt="Слайд 2"></div>
+                    <div class="swiper-slide"><img src="image3.jpg" alt="Слайд 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div> -->
+        </section>
+
+        <section class="brands"> 
+            
+                <div class="brand-card">
+                    <a href="/brandhouse/catalog?sex=&type=&brand=Nike&title=">
+                        <img src="https://bunt.by/wp-content/uploads/2024/03/Nike-SB-Force-58-Premium.jpg" alt="Nike">
+                        <h4>Nike</h4>
+                        <p>Discover the unlimited potential of athletic apparel designed for performance and style.</p>
+                    </a>
+                </div>
+            <div class="brand-card">
+                <a href="/brandhouse/catalog?sex=&type=&brand=Adidas&title=">
+                    <img src="https://bunt.by/wp-content/uploads/2024/03/adidas-Originals-Forum-Low-NDC.jpg" alt="Adidas">
+                    <h4>Adidas</h4>
+                    <p>Step into the future of sportswear that blends innovation with fashion for the modern athlete.</p>
+                </a>    
+            </div>
+            <div class="brand-card">
+                <a href="/brandhouse/catalog?sex=&type=&brand=Puma&title=">
+                    <img src="https://bunt.by/wp-content/uploads/2024/03/puma-sleapstream.jpg" alt="Puma">
+                    <h4>Puma</h4>
+                    <p>Unleash your inner beast with athletic gear that’s as fierce as you are.</p>
+                </a>    
+            </div>
+        </section>
+
+        <section class="clothes-style">
+            <h3 >ВЫБЕРИ СВОЙ СТИЛЬ</h3>
+            <div class="products">
+                <a class="product-card" href="/brandhouse/catalog?sex=female&type=&brand=&title=">ЖЕНСКОЕ</a>
+                
+                <a class="product-card" href="/brandhouse/catalog?sex=Male&type=&brand=&title=">МУЖСКОЕ</a>
+                <!-- <div class="product-card"></div>
+                <div class="product-card">Product 4</div> -->
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <a href="/brandhouse/paymentInfo">Оплата</a>
+            <a href="/brandhouse/deliveryInfo">Доставка</a>
+            <a href="/brandhouse/aboutUs">О нас</a>
+        </div>
+    </footer>
+
+    
+</div>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script> -->
+    
+</body>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+</html>

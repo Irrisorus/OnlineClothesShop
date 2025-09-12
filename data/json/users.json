@@ -1,0 +1,54 @@
+[
+  {
+    "email": "admin@gmail.com",
+    "password": "1",
+    "_locals": {}
+  },
+  {
+    "email": "kitsunyaroslav@gmail.com",
+    "password": "1",
+    "cart": [
+      {
+        "name": "Куртка Nike Windrunner PrimaLoft®",
+        "article": "FB8184",
+        "size": "46/48",
+        "price": "988",
+        "amount": "1",
+        "img": "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/9ce/jndsy4kdvqa41i1hzsybkwyaaqj4k4vi/457_457_1/fb8185-077-a.webp"
+      }
+    ],
+    "_locals": {},
+    "name": "Всеволод",
+    "adress": "Минск",
+    "phoneNumber": "+233 205599853"
+  },
+  {
+    "email": "toster@gmail.com",
+    "password": "123Ss123@",
+    "cart": []
+  },
+  {
+    "email": "newTest123@gmail.com",
+    "password": "123123asdA!",
+    "cart": [],
+    "_locals": {},
+    "name": "Антон",
+    "adress": "Минск",
+    "phoneNumber": "+233 205599853"
+  },
+  {
+    "email": "test!@gmail.com",
+    "password": "123asdA!",
+    "cart": [
+      {
+        "name": "Кроссовки Adidas Forum Low",
+        "article": "FY7757",
+        "size": "41.5",
+        "price": "400",
+        "amount": "2",
+        "img": "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/0a3/lwlrdyvp2s9pbb4nfe8lqbedfbm3jp13/457_457_1/fy7757-a.webp"
+      }
+    ],
+    "_locals": {}
+  }
+]

@@ -1,0 +1,639 @@
+[
+  {
+    "name": "Куртка Nike Windrunner PrimaLoft Storm-FIT Hooded Puffer Jacket",
+    "article": "FB8185",
+    "price": "1000",
+    "salePrice": "700",
+    "availableAmount": [
+      {
+        "size": "46/48",
+        "amount": "0"
+      },
+      {
+        "size": "42/44",
+        "amount": "0"
+      },
+      {
+        "size": "46/48",
+        "amount": "5"
+      }
+    ],
+    "color": [
+      "grey",
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/9ce/jndsy4kdvqa41i1hzsybkwyaaqj4k4vi/457_457_1/fb8185-077-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/f3e/jr824tjifn8kk1128epwaj2bkis7z20r/457_457_1/fb8185-077-b.webp"
+    ],
+    "reviews": [
+      {
+        "userName": "не наталья",
+        "review": "4",
+        "reviewText": "шик"
+      },
+      {
+        "userName": "Виталий",
+        "review": "4",
+        "reviewText": "Класс"
+      },
+      {
+        "userName": "Антон",
+        "review": "5",
+        "reviewText": "Огонь"
+      },
+      {
+        "userName": "Антон",
+        "review": "5",
+        "reviewText": "Огонь"
+      },
+      {
+        "userName": "Виталий",
+        "review": "3",
+        "reviewText": "Класс"
+      }
+    ],
+    "type": "jacket",
+    "brand": "Nike",
+    "sex": "male",
+    "description": "",
+    "edit": true,
+    "outOfstock": false,
+    "_locals": {}
+  },
+  {
+    "name": "Куртка Nike Windrunner PrimaLoft®",
+    "article": "FB8184",
+    "price": "988",
+    "salePrice": "689",
+    "availableAmount": [
+      {
+        "size": "46/48",
+        "amount": 9
+      },
+      {
+        "size": "42/44",
+        "amount": "0"
+      }
+    ],
+    "color": [
+      "red",
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/9ce/jndsy4kdvqa41i1hzsybkwyaaqj4k4vi/457_457_1/fb8185-077-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/f3e/jr824tjifn8kk1128epwaj2bkis7z20r/457_457_1/fb8185-077-b.webp"
+    ],
+    "reviews": [
+      {
+        "userName": "Виталий",
+        "review": "5",
+        "reviewText": "!"
+      },
+      {
+        "userName": "Георгий",
+        "review": "5",
+        "reviewText": "шик"
+      },
+      {
+        "userName": "Георгий",
+        "review": "5",
+        "reviewText": "блекс"
+      },
+      {
+        "userName": "Георгий",
+        "review": "5",
+        "reviewText": "вау"
+      }
+    ],
+    "type": "jacket",
+    "brand": "Nike",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "edit": true,
+    "_locals": {}
+  },
+  {
+    "name": "Куртка Puma ESS Hooded Padded Jacket Alpine Snow",
+    "article": "84894087",
+    "price": "404",
+    "salePrice": "",
+    "availableAmount": [
+      {
+        "size": "M",
+        "amount": 4
+      },
+      {
+        "size": "XS",
+        "amount": 0
+      },
+      {
+        "size": "S",
+        "amount": 0
+      }
+    ],
+    "color": [
+      "white",
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/c0a/essxh1swkyv22rjxllrwnqi0e2sz7fbr/457_457_1/84894087-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/c0a/essxh1swkyv22rjxllrwnqi0e2sz7fbr/457_457_1/84894087-a.webp"
+    ],
+    "reviews": [
+      {
+        "userName": "Наталья",
+        "review": 4.5,
+        "reviewText": "Неплохая такая куртка."
+      },
+      {
+        "userName": "не наталья",
+        "review": "3",
+        "reviewText": "не особо"
+      },
+      {
+        "userName": "Виталий",
+        "review": "4",
+        "reviewText": "Нравится"
+      },
+      {
+        "userName": "Максим",
+        "review": "5",
+        "reviewText": "Отличная куртка!"
+      },
+      {
+        "userName": "Василий",
+        "review": "2",
+        "reviewText": "Брак!"
+      },
+      {
+        "userName": "ad",
+        "review": "3",
+        "reviewText": ""
+      },
+      {
+        "userName": "ad",
+        "review": "3",
+        "reviewText": "ad"
+      }
+    ],
+    "type": "jacket",
+    "brand": "Puma",
+    "sex": "female",
+    "description": "",
+    "outOfstock": false,
+    "edit": true,
+    "_locals": {}
+  },
+  {
+    "name": "Майка Nike Giannis Antetokounmpo Dri-FIT DNA®",
+    "article": "FZ0924-133",
+    "price": "237",
+    "salePrice": "116",
+    "availableAmount": [
+      {
+        "size": "46/48",
+        "amount": "10"
+      },
+      {
+        "size": "42/44",
+        "amount": "2"
+      },
+      {
+        "size": "50/52",
+        "amount": "0"
+      },
+      {
+        "size": "52/54",
+        "amount": " 1"
+      }
+    ],
+    "color": [
+      "pink",
+      "red"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/32a/ib3t001vkxzgrgvyrvft33lznqjrzpyt/457_457_1/fz0924-133-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/754/2rzv87ix3t9on05fvld9uqk5cyluqkqb/457_457_1/fz0924-133-b.webp"
+    ],
+    "reviews": [],
+    "type": "jacket",
+    "brand": "Nike",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "_locals": {},
+    "edit": true
+  },
+  {
+    "name": "Поло Nike Club Long-Sleeve Knit Polo",
+    "article": "FQ3417-010",
+    "price": "205",
+    "salePrice": "144",
+    "availableAmount": [
+      {
+        "size": "54/56",
+        "amount": 0
+      },
+      {
+        "size": "50/52",
+        "amount": 0
+      },
+      {
+        "size": "46/48",
+        "amount": 8
+      },
+      {
+        "size": "2XL",
+        "amount": 1
+      }
+    ],
+    "color": [
+      "white",
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/ae5/m58v40iw3u2w2zr5v6y4jn0dx1jrps70/457_457_1/fq3417-010-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/7a0/rnzl4xdbflhi4u2odzirnmlxet2pkjxd/457_457_1/fq3417-010-b.webp"
+    ],
+    "reviews": [
+      {
+        "userName": "Виталий",
+        "review": "5",
+        "reviewText": ""
+      }
+    ],
+    "type": "shirt",
+    "brand": "Nike",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "_locals": {},
+    "edit": true
+  },
+  {
+    "name": "Майка NikeCourt Slam",
+    "article": "FD5656-100",
+    "price": "295",
+    "salePrice": "206",
+    "availableAmount": [
+      {
+        "size": "36/38",
+        "amount": 1
+      },
+      {
+        "size": "46/48",
+        "amount": 10
+      },
+      {
+        "size": "48/50",
+        "amount": 1
+      }
+    ],
+    "color": [
+      "white",
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/7f0/p3xqt4sauquzis1ggbb4l1a5p2wy8ua1/457_457_1/fd5656-100-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/610/q33yu6m9fiuhvxkx6u05xyxqmwcbh0u7/457_457_1/fd5656-100-b.webp"
+    ],
+    "reviews": [],
+    "type": "shirt",
+    "brand": "Nike",
+    "sex": "female",
+    "description": "",
+    "_locals": {},
+    "outOfstock": false
+  },
+  {
+    "name": "Брюки Nike Life Carpenter Pant",
+    "article": "FB7198-010",
+    "price": "517",
+    "salePrice": "253 ",
+    "availableAmount": [
+      {
+        "size": "30",
+        "amount": 2
+      },
+      {
+        "size": "32",
+        "amount": 9
+      },
+      {
+        "size": "34",
+        "amount": 1
+      }
+    ],
+    "color": [
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/e16/ty0qw94olughky2vog8r509kr55t94ym/457_457_1/fb7198-010-a.webp"
+    ],
+    "reviews": [],
+    "type": "pants",
+    "brand": "Nike",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "_locals": {}
+  },
+  {
+    "name": "Штаны Puma Essential Elevated Velour Straight Pants ",
+    "article": "67599301",
+    "price": "236",
+    "salePrice": "",
+    "availableAmount": [
+      {
+        "size": "S",
+        "amount": 0
+      },
+      {
+        "size": "M",
+        "amount": 0
+      },
+      {
+        "size": "L",
+        "amount": 0
+      }
+    ],
+    "color": [
+      "black"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/752/riuo5ceg7sxa1q3b6c4oopv0eym02rds/457_457_1/67599301-a.webp"
+    ],
+    "reviews": [],
+    "type": "pants",
+    "brand": "Puma",
+    "sex": "female",
+    "description": "",
+    "outOfstock": true,
+    "_locals": {}
+  },
+  {
+    "name": "Кроссовки Adidas Forum Low",
+    "article": "FY7757",
+    "price": "400",
+    "salePrice": "",
+    "availableAmount": [
+      {
+        "size": "40",
+        "amount": 0
+      },
+      {
+        "size": "40.5",
+        "amount": 0
+      },
+      {
+        "size": "41",
+        "amount": 1
+      },
+      {
+        "size": "41.5",
+        "amount": 0
+      },
+      {
+        "size": "42",
+        "amount": 2
+      },
+      {
+        "size": "42.5",
+        "amount": 2
+      },
+      {
+        "size": "43",
+        "amount": 0
+      },
+      {
+        "size": "43.5",
+        "amount": 2
+      },
+      {
+        "size": "44",
+        "amount": 2
+      },
+      {
+        "size": "44.5",
+        "amount": 2
+      },
+      {
+        "size": "45",
+        "amount": 2
+      }
+    ],
+    "color": [
+      "black",
+      "white"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/0a3/lwlrdyvp2s9pbb4nfe8lqbedfbm3jp13/457_457_1/fy7757-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/07d/o1zbz1xykf824c0yz0zivhg3jv1a5ctn/457_457_1/fy7757-b.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/eae/r1q8eagdl1mhmn03mq066wfyg95fvvux/457_457_1/fy7757-c.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/27c/fgtmmpubjyzg64rdeafxh9hih6qvwsmx/457_457_1/fy7757-d.webp"
+    ],
+    "reviews": [
+      {
+        "userName": "Виталий",
+        "review": "5",
+        "reviewText": "Прослужили 3 года. Отличное качество. Буду покупать еще раз"
+      },
+      {
+        "userName": "Антон",
+        "review": "3",
+        "reviewText": "Для скейтборда не подошли. Износились за 1 месяц"
+      },
+      {
+        "userName": "Антон",
+        "review": "3",
+        "reviewText": "Для скейтборда не подошли. Износились за 1 месяц"
+      },
+      {
+        "userName": "Антон",
+        "review": "3",
+        "reviewText": "a"
+      }
+    ],
+    "type": "shoes",
+    "brand": "Adidas",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "_locals": {}
+  },
+  {
+    "name": "Кроссовки Nike Air Max 90",
+    "article": "DH8010-001",
+    "price": "599",
+    "salePrice": "419",
+    "availableAmount": [
+      {
+        "size": "35",
+        "amount": 2
+      },
+      {
+        "size": "35.5",
+        "amount": 2
+      },
+      {
+        "size": "36",
+        "amount": 2
+      },
+      {
+        "size": "36.5",
+        "amount": 5
+      },
+      {
+        "size": "37",
+        "amount": 20
+      },
+      {
+        "size": "37.5",
+        "amount": 2
+      },
+      {
+        "size": "38",
+        "amount": 2
+      },
+      {
+        "size": "38.5",
+        "amount": 10
+      },
+      {
+        "size": "39",
+        "amount": 2
+      },
+      {
+        "size": "39.5",
+        "amount": 4
+      },
+      {
+        "size": "40",
+        "amount": 3
+      }
+    ],
+    "color": [
+      "black",
+      "white"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/51c/4zx33nuvr4kiv2drkv7tg6pi61l7cnby/457_457_1/dh8010-001-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/9e7/pkhezeefb8a2y397b2zo57c4hif82xo1/457_457_1/dh8010-001-b.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/569/u9xhr7k7qga2g369qo01u8r1py6ozbo3/457_457_1/dh8010-001-c.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/111/n2ruoibjmxflevkns2ztwtz7ynputpb5/457_457_1/dh8010-001-d.webp"
+    ],
+    "reviews": [],
+    "type": "shoes",
+    "brand": "nike",
+    "sex": "female",
+    "description": "",
+    "outOfstock": false,
+    "_locals": {}
+  },
+  {
+    "name": "Кроссовки Puma Ca Pro Classic",
+    "article": "38019001",
+    "price": "420",
+    "salePrice": "328",
+    "availableAmount": [
+      {
+        "size": "40",
+        "amount": 9
+      },
+      {
+        "size": "40.5",
+        "amount": "0"
+      },
+      {
+        "size": "41",
+        "amount": "0"
+      },
+      {
+        "size": "41.5",
+        "amount": "0"
+      },
+      {
+        "size": "42",
+        "amount": "0"
+      },
+      {
+        "size": "42.5",
+        "amount": 0
+      },
+      {
+        "size": "43",
+        "amount": 2
+      },
+      {
+        "size": "43.5",
+        "amount": 0
+      },
+      {
+        "size": "44",
+        "amount": 5
+      },
+      {
+        "size": "44.5",
+        "amount": 2
+      },
+      {
+        "size": "45",
+        "amount": "2"
+      }
+    ],
+    "color": [
+      "black",
+      "white"
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/ca9/b6cvztoifc119w3mwyoy2ds294j3s6vs/457_457_1/38019001-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/69b/pla3pvii0bezs9kb7nu8crbdl885l1fk/457_457_1/38019001-b.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/521/5eh53flci20s04fr3u2zm56271di50f3/457_457_1/38019001-c.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/880/g82ll9j6qsa1k6l20bnwar1lq7b8habh/457_457_1/38019001-d.webp"
+    ],
+    "reviews": [],
+    "type": "shoes",
+    "brand": "Puma",
+    "sex": "male",
+    "description": "",
+    "outOfstock": false,
+    "edit": true,
+    "_locals": {}
+  },
+  {
+    "name": "Брюки Nike Sportswear Club FZ0899-010",
+    "article": "124128",
+    "brand": "Nike",
+    "price": "300",
+    "salePrice": "",
+    "availableAmount": [
+      {
+        "size": "54/56",
+        "amount": 1
+      }
+    ],
+    "img": [
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/fd6/ne0ifvnfuspudiown4h9w2k5m9qvp87j/457_457_1/fz0899-010-a.webp",
+      "https://all-stars.by/local/templates/newDev/upload/upload/resize_cache/iblock/363/cxl44nw2ww4vcye2ncuso57glgrpipdy/457_457_1/fz0899-010-b.webp"
+    ],
+    "type": "pants",
+    "sex": "male",
+    "outOfstock": true,
+    "edit": true,
+    "_locals": {},
+    "reviews": [
+      {
+        "userName": "Антон",
+        "review": "4",
+        "reviewText": "Огонь штанишки"
+      },
+      {
+        "userName": "Виталий",
+        "review": "5",
+        "reviewText": "Лучшая модель"
+      }
+    ]
+  }
+]

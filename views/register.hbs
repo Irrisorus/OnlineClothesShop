@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/logReg.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <title>Регистрация</title>
+    
+</head>
+<body>
+  
+    <div class="background"></div>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2>Регистрация</h2>
+            <form id="registerForm" >
+                <input type="email" id="userEmail" placeholder="Почта" required />
+                <input type="password" id="password" placeholder="Пароль" required />
+                <input type="password" id="confirm-password" placeholder="Подтверждение пароля" required />
+                <div class="button-block">
+                    <button type="button" onclick="sendData()">Register</button>
+                    <a href="/brandhouse/logIn">Sign Up</a>
+                </div>
+                <div class="error" id="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const passwordRegex = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+        const error=document.getElementById("error-message")
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        function validateForm() {
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirm-password').value;
+            if(!userEmail.value){
+                 error.style.display = 'block';
+                 error.textContent="Введите имя пользователя"
+                 return false;
+            }
+           
+             if(!password){
+                error.style.display = 'block';
+                error.textContent="Введите пароль"
+                return false;
+            }
+             if(!confirmPassword){
+                error.style.display = 'block';
+                error.textContent="Подтвердите пароль"
+                return false;
+            }
+
+             if (password !== confirmPassword ) {
+                error.style.display = 'block';
+                error.textContent="Пароли  не совпадают"
+                return false;
+                // passwordInput.classList.add('input_error');
+                // confirmPasswordInput.classList.add('input_error');
+               
+              
+            } else {
+                
+                return true
+                // passwordInput.classList.remove('input_error');
+                // confirmPasswordInput.classList.remove('input_error');
+                
+            }
+        }
+
+        async function sendData(){
+           
+            
+            
+
+            const userEmail=document.getElementById('userEmail').value;
+            const password = document.getElementById('password').value;
+            
+            if(validateForm()){
+                console.log(password)
+               let key=passwordRegex.test(password)
+            if(key==false){
+                console.log("bbebebeeb")
+                error.style.display = 'block';
+                error.textContent="пароль должен быть не менее 8 символов, содержать как минимум одну заглавную букву, одну строчную букву и одну цифру"
+                return ;
+            }   
+                    const response = await fetch("/brandhouse/newUser", {
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ userEmail:userEmail, password:password}), 
+                })
+                const data = await response.json();
+                if (!response.ok) {
+                    error.textContent = data.message;
+                    error.classList.add("error_none")
+                    return;
+                }
+            document.location.pathname = data.path;
+            
+            
+           }
+        }
+    </script>
+    <script src="/scripts/header.js"></script>
+</body>
+</html>

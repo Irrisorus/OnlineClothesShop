@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка - BrandHouse</title>
+     <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/delivery.css">
+     <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/font-face.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+ 
+</head>
+<body>
+    {{>header}}
+    <div class="hero">
+        <div class="content">
+            <h1 class="title">Доставка</h1>
+            <p class="subtitle">Быстрая доставка по всей Беларуси</p>
+
+            <div class="delivery-methods">
+                <div class="delivery-card">
+                    <div class="delivery-icon">🚚</div>
+                    <h3>Курьерская доставка</h3>
+                    <p>Доставка до двери</p>
+                    <ul class="delivery-details">
+                        <li>Минск - на следующий день</li>
+                        <li>Бесплатно при заказе от 100 BYN</li>
+                        <li>Примерка перед покупкой</li>
+                    </ul>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-icon">📬</div>
+                    <h3>Почтовая доставка</h3>
+                    <p>Белпочта</p>
+                    <ul class="delivery-details">
+                        <li>Доставка по всей Беларуси</li>
+                        <li>2-5 рабочих дней</li>
+                        <li>Отслеживание посылки</li>
+                    </ul>
+                </div>
+
+                <div class="delivery-card">
+                    <div class="delivery-icon">🏪</div>
+                    <h3>Самовывоз</h3>
+                    <p>Из пунктов выдачи</p>
+                    <ul class="delivery-details">
+                        <li>Более 10 пунктов выдачи</li>
+                        <li>Бесплатно</li>
+                        <li>Хранение 5 дней</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="delivery-map">
+                <h2 class="section-title">Зоны доставки</h2>
+                <div class="zone-grid">
+                    <div class="zone-card">
+                        <h3>Зона 1 - Минск</h3>
+                        <ul>
+                            <li>Доставка на следующий день</li>
+                            <li>Бесплатно от 100 BYN</li>
+                            <li>До 100 BYN - 10 BYN</li>
+                        </ul>
+                    </div>
+                    <div class="zone-card">
+                        <h3>Зона 2 - Областные центры</h3>
+                        <ul>
+                            <li>Доставка 1-2 дня</li>
+                            <li>Бесплатно от 150 BYN</li>
+                            <li>До 150 BYN - 15 BYN</li>
+                        </ul>
+                    </div>
+                    <div class="zone-card">
+                        <h3>Зона 3 - Другие города</h3>
+                        <ul>
+                            <li>Доставка 2-5 дней</li>
+                            <li>Бесплатно от 200 BYN</li>
+                            <li>До 200 BYN - 20 BYN</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2 class="section-title">Важная информация</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>График доставки</h3>
+                        <p>Доставка осуществляется с понедельника по субботу с 10:00 до 21:00. Курьер свяжется с вами за час до прибытия.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Отслеживание заказа</h3>
+                        <p>После оформления заказа вы получите трек-номер для отслеживания статуса доставки в личном кабинете.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <h2 class="section-title">Часто задаваемые вопросы</h2>
+                    <div class="faq-item">
+                        <h3>Что делать, если я не могу получить заказ?</h3>
+                        <p>Свяжитесь с нами по телефону +375 29 XXX-XX-XX, и мы перенесем доставку на удобное для вас время.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Как долго хранится заказ в пункте выдачи?</h3>
+                        <p>Заказ хранится в пункте выдачи 5 рабочих дней. После этого срока заказ возвращается на склад.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/checkUser.js"></script>
+</html>
